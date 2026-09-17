@@ -1,0 +1,218 @@
+/* ===== Reset & Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #2b2d42;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+body > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* ===== Shared Card Style ===== */
+#income-section,
+#summary,
+#expense-form {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Income Section ===== */
+#income-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#income-section label {
+    font-weight: 600;
+    color: #334155;
+}
+
+#monthly-income {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+#set-income-btn {
+    background-color: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#set-income-btn:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== Summary Section ===== */
+#summary {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#summary p {
+    flex: 1;
+    min-width: 120px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+#summary span {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 4px;
+}
+
+#balance {
+    color: #16a34a;
+}
+
+#expense-total {
+    color: #dc2626;
+}
+
+/* ===== Expense Form ===== */
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#expense-form label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: -6px;
+}
+
+#expense-form input {
+    padding: 9px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+}
+
+#expense-form input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+#submit-btn {
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s ease;
+}
+
+#submit-btn:hover {
+    background-color: #15803d;
+}
+
+/* ===== Transaction List ===== */
+#transaction-list {
+    list-style: none;
+}
+
+#transaction-list li {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#transaction-list li strong {
+    color: #dc2626;
+}
+
+/* ===== Edit/Delete Buttons ===== */
+.edit-btn,
+.delete-btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 6px;
+}
+
+.edit-btn {
+    background-color: #fef9c3;
+    color: #854d0e;
+}
+
+.edit-btn:hover {
+    background-color: #fde047;
+}
+
+.delete-btn {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.delete-btn:hover {
+    background-color: #fca5a5;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 500px) {
+    #summary {
+        flex-direction: column;
+    }
+
+    #income-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

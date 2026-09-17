@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Expense Tracker App</h1>
+    <p>Welcome to the Expense Tracker App!</p>
+
+    <!-- Income Setup -->
+    <div id="income-section">
+        <label for="monthly-income">Monthly Income:</label>
+        <input type="number" id="monthly-income" step="0.01" placeholder="Enter your income">
+        <button type="button" id="set-income-btn">Set Income</button>
+    </div>
+
+    <!-- Summary -->
+    <div id="summary">
+        <p>Income: ₹<span id="income">0</span></p>
+        <p>Total Expenses: ₹<span id="expense-total">0</span></p>
+        <p>Balance: ₹<span id="balance">0</span></p>
+    </div>
+
+    <!-- Expense Form -->
+    <form id="expense-form">
+        <label for="entry-name">Description:</label>
+        <input type="text" id="entry-name" required>
+
+        <label for="entry-amount">Amount:</label>
+        <input type="number" id="entry-amount" step="0.01" required>
+
+        <label for="entry-category">Category:</label>
+        <input type="text" id="entry-category" placeholder="e.g. Food, Rent, Travel">
+
+        <label for="entry-date">Date:</label>
+        <input type="date" id="entry-date">
+
+        <button type="submit" id="submit-btn">Add Expense</button>
+    </form>
+
+    <!-- Expense list gets rendered here by JS -->
+    <ul id="transaction-list"></ul>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

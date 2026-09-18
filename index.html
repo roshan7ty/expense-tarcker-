@@ -13,7 +13,7 @@
     <!-- Income Setup -->
     <div id="income-section">
         <label for="monthly-income">Monthly Income:</label>
-        <input type="number" id="monthly-income" step="0.01" placeholder="Enter your income">
+        <input type="number" id="monthly-income" step="1" min="0" placeholder="Enter your income">
         <button type="button" id="set-income-btn">Set Income</button>
     </div>
 
@@ -24,16 +24,28 @@
         <p>Balance: ₹<span id="balance">0</span></p>
     </div>
 
+    <div id="category-summary"></div>
+    <div id="pie-chart-container">
+    <div id="pie-chart"></div>
+    <ul id="pie-legend"></ul>
+</div>
+
     <!-- Expense Form -->
     <form id="expense-form">
         <label for="entry-name">Description:</label>
-        <input type="text" id="entry-name" required>
+        <input type="text" id="entry-name" >
 
         <label for="entry-amount">Amount:</label>
-        <input type="number" id="entry-amount" step="0.01" required>
+        <input type="number" id="entry-amount" step="1" required min="0">
 
         <label for="entry-category">Category:</label>
-        <input type="text" id="entry-category" placeholder="e.g. Food, Rent, Travel">
+        <select id="entry-category">
+            <option value="Food">Food</option>
+            <option value="Rent">Rent</option>
+            <option value="Travel">Travel</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Investments">Investments</option>
+        </select>
 
         <label for="entry-date">Date:</label>
         <input type="date" id="entry-date">

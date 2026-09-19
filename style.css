@@ -490,3 +490,13 @@ body > p {
         min-width: 110px;
     }
 }
+#entry-date::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+#entry-date::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
